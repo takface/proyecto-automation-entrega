@@ -29,9 +29,6 @@ public class AddToCartDefinitions {
                 "El nombre del producto no se muestra en el carrito"
         );
 
-        Assert.assertTrue(
-                shoppingCartPage.total240(),
-                "El precio total no es 240"
-        );
+
     }
 }

@@ -42,7 +42,7 @@ public class Hooks {
     private WebDriver getChromeDriver() {
         ChromeOptions options = new ChromeOptions();
 
-        options.addArguments("window-size=1024,768");
+        options.addArguments("start-maxized");
         //se modifica tamaño para mejorar la prueba, tengo una maquina muy basica
         options.addArguments("incognito");
         options.addArguments("--ignore-certificate-errors");

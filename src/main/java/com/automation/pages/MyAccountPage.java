@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class MyAccountPage extends BasePage {
 
     private By title = By.xpath("//h2[text()=\"My Account\"]");
-    private By logoutOption = By.xpath("//li/a[text()='Logout']");
+    private By logoutOption = By.xpath("//a[contains(@href, 'route=account/logout')]");
 
 
 
@@ -20,6 +20,6 @@ public class MyAccountPage extends BasePage {
 
     public void logout() {
         click(title);
-        click(logoutOption);
+        clickWithJS(logoutOption);
     }
 }
