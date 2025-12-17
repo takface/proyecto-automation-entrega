@@ -15,5 +15,5 @@ Característica: Crear cuenta
   Escenario: Crear cuenta incorrecto
     Dado que el usuario ingresa a la home
     Y el usuario ingresa a registrar una cuenta
-    Cuando el usuario crea la cuenta incorrecta
+    Cuando el usuario crea la cuenta con datos vacios
     Entonces se muestra mensaje de error de crear cuenta

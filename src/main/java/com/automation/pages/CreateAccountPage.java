@@ -13,6 +13,9 @@ public class CreateAccountPage extends BasePage {
     private By confirmPassword = By.id("input-confirm");
     private By checkbox = By.name("agree");
     private By continueBtn = By.xpath("//input[@value=\"Continue\"]");
+    private By firstNameErrorMessage =
+            By.xpath("//input[@id='input-firstname']/following-sibling::div[@class='text-danger']");
+
 
     public CreateAccountPage(WebDriver driver) {
         super(driver);
@@ -34,4 +37,19 @@ public class CreateAccountPage extends BasePage {
 
         click(continueBtn);
     }
+    public void registerWithEmptySpace() {
+        sendKeys(this.lastName, "Doe");
+        sendKeys(this.email, "test" + System.currentTimeMillis() + "@gmail.com");
+
+
+        click(checkbox);
+
+        click(continueBtn);
+    }
+
+    public boolean firstNameErrorIsDisplayed() {
+        return isDisplayed(firstNameErrorMessage);
+    }
+
+
 }

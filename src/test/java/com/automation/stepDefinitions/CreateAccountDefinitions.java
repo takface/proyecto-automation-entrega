@@ -34,4 +34,18 @@ public class CreateAccountDefinitions {
         Assert.assertTrue(createdAccountPage.isSuccessfullyTextVisible(),
                 "El texto de 'Cuenta creada' no esta visible");
     }
+
+    @Cuando("el usuario crea la cuenta con datos vacios")
+    public void elUsuarioCreaLaCuentaConDatosVacios() {
+        createAccountPage.registerWithEmptySpace();
+    }
+
+    @Entonces("se muestra mensaje de error de crear cuenta")
+    public void seMuestraMensajeDeErrorDeCrearCuenta() {
+        Assert.assertTrue(
+                createAccountPage.firstNameErrorIsDisplayed(),
+                "No se muestra el mensaje de error del campo First Name"
+        );
+    }
+
 }
