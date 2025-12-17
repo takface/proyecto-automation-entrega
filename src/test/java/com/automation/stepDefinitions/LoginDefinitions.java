@@ -35,7 +35,7 @@ public class LoginDefinitions {
         loginPage.login("pepe@gmail.com", "abc456");
     }
 
-    @Entonces("se muestra un mensaje de error de login")
+    @Entonces("se muestra un mensaje de error de login.feature")
     public void seMuestraUnMensajeDeErrorDeLogin() {
         Assert.assertTrue(loginPage.errorMessageIsDisplayed(), "Mensaje de error no visible");
     }

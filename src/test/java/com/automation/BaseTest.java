@@ -21,7 +21,7 @@ public class BaseTest {
 
         //options.addArguments("headless");
 
-        options.setPageLoadTimeout(Duration.ofSeconds(60));
+        options.setPageLoadTimeout(Duration.ofSeconds(180));
 
         // ruta al binario del driver
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");

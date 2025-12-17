@@ -42,7 +42,8 @@ public class Hooks {
     private WebDriver getChromeDriver() {
         ChromeOptions options = new ChromeOptions();
 
-        options.addArguments("start-maximized");
+        options.addArguments("window-size=1024,768");
+        //se modifica tamaño para mejorar la prueba, tengo una maquina muy basica
         options.addArguments("incognito");
         options.addArguments("--ignore-certificate-errors");
 
@@ -51,8 +52,9 @@ public class Hooks {
         }
 
         options.setPageLoadTimeout(Duration.ofSeconds(60));
+        //se modifica tiempo para mejorar la prueba, tengo una maquina muy basica
 
-        // ruta al binario del driver
+
         if (!getProperty("docker_enable").equals("true")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
         }
