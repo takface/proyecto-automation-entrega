@@ -1,13 +1,14 @@
 #language: es
 
 @regression
-  Característica: Logout
 
-    @TEST-6
+Característica: logout
 
-    Escenario: se realiza logout
+@TEST-6
 
-  Dado que el usuario ingresa a la home
-  Y usuario ingresa al login
-  Cuando el usuario se desloguea
-  Entonces se muestra mensaje de logout
+Escenario: se realiza logout
+Dado que el usuario ingresa a la home
+Y el usuario ingresa al login
+Cuando el usuario se loguea con datos válidos
+Y el usuario se desloguea
+Entonces se muestra mensaje de logout
