@@ -7,9 +7,8 @@ import io.cucumber.testng.CucumberOptions;
         features = "src/test/resources/features",
         glue = {"com.automation.stepDefinitions", "com.automation.hooks"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@TEST-6"
-
-)
+        tags = "@regression",
+        publish= true)
 public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
 
 }

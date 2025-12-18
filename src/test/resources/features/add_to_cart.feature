@@ -1,8 +1,8 @@
 #language: es
 
-@regression
-  Característica: Cart
 
+  Característica: Cart
+    @regression
     @TEST-7
   Escenario: Agregar un producto al carrito
   Dado que el usuario ingresa a la home
